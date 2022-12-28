@@ -1,0 +1,39 @@
+server:
+  port: 80
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/amcis
+    username: postgres
+    password: 12
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+
+jwt:
+  access:
+    key: @e@p7#70OZn0#Dsaodi98BK8C1%T&hBnrzgqK28o
+    expiration-time: 72000000
+  refresh:
+    key: 7787dsa8dp7#%70OZ()BK8C1%Taskldjksal***
+    expiration-time: 604800000
+
+logging:
+  file:
+    name: amcis.log
+
+app:
+  admin:
+    phoneNumber: "+998991234567"
+    password: root123
+  upload:
+    folder: D:\TestB20\

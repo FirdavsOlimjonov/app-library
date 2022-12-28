@@ -6,4 +6,5 @@ import uz.isft.applibary.entity.ApiKey;
 import java.util.Optional;
 
 public interface ApiKeyRepository extends JpaRepository<ApiKey, Integer> {
+    Optional<ApiKey> findFirstByIdIsNotNull();
 }

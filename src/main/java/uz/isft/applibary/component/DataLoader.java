@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import uz.isft.applibary.entity.ApiKey;
 import uz.isft.applibary.entity.LanguageKey;
 import uz.isft.applibary.entity.Role;
 import uz.isft.applibary.entity.User;
@@ -51,7 +52,7 @@ public class DataLoader implements CommandLineRunner {
             addAdmin();
         }
         addNewLanguageKeys();
-//        addApiKeys();
+        addApiKeys();
 
     }
 
@@ -72,12 +73,12 @@ public class DataLoader implements CommandLineRunner {
         languageKeyRepository.saveAll(languageKeys);
     }
 
-//    private void addApiKeys() {
-//        ApiKey apiKey = apiKeyRepository
-//                .findFirstByIdIsNotNull()
-//                .orElseGet(ApiKey::new);
-//        apiKeyRepository.save(apiKey);
-//    }
+    private void addApiKeys() {
+        ApiKey apiKey = apiKeyRepository
+                .findFirstByIdIsNotNull()
+                .orElseGet(ApiKey::new);
+        apiKeyRepository.save(apiKey);
+    }
 
     private void addAdmin() {
         userRepository.save(

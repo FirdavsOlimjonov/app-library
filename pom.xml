@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>uz.isft</groupId>
-    <artifactId>app-libary</artifactId>
+    <artifactId>app-library</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>app-library</name>
     <description>app-library</description>
